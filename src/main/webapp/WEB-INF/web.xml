@@ -3,25 +3,6 @@
 
 <module-name>cobranca-service</module-name>
 
-    <!--<security-constraint>-->
-    <!--<web-resource-collection>-->
-    <!--<url-pattern>/service/versao</url-pattern>-->
-    <!--</web-resource-collection>-->
-    <!--&lt;!&ndash;        <user-data-constraint>-->
-    <!--<transport-guarantee>CONFIDENTIAL</transport-guarantee>-->
-    <!--</user-data-constraint>  &ndash;&gt;-->
-    <!--<auth-constraint>-->
-    <!--<role-name>user</role-name>-->
-    <!--</auth-constraint>-->
-    <!--</security-constraint>-->
 
-    <!--<login-config>-->
-    <!--<auth-method>KEYCLOAK</auth-method>-->
-    <!--<realm-name>basic-auth</realm-name>-->
-    <!--</login-config>-->
-
-    <!--<security-role>-->
-    <!--<role-name>user</role-name>-->
-    <!--</security-role>-->
 
 </web-app>
