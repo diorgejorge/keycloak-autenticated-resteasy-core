@@ -1,6 +1,5 @@
 package com.totvs.noneco.rest
 
-import org.jboss.resteasy.annotations.cache.NoCache
 
 import javax.ws.rs.GET
 
@@ -8,12 +7,12 @@ import javax.ws.rs.GET
  * Created by totvs on 31/08/2016.
  */
 import javax.ws.rs.Path
+import javax.ws.rs.core.Response
 
-@Path("service")
+@Path("/service")
 public class Utilities {
     @GET
-    @NoCache
-    @Path("versao")
+    @Path("/versao")
     public String echo() {
         return buildTime();
     }
@@ -33,9 +32,8 @@ public class Utilities {
     }
 
     @GET
-    @NoCache
     @Path("teste")
-    public String teste() {
-        return "OK";
+    public Response teste() {
+        return Response.ok().build();
     }
 }
