@@ -24,7 +24,7 @@ public class Utilities {
         try {
             prop.load(input);
 
-            return prop.getProperty("build.date");
+            return "Versao Construida em "+prop.getProperty("build.date");
         } catch (IOException e) {
             return "";
         }
