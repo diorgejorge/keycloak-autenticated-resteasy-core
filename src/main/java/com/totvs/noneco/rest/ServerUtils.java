@@ -1,6 +1,8 @@
 package com.totvs.noneco.rest;
 
 
+import javax.annotation.security.RolesAllowed;
+import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
@@ -13,9 +15,11 @@ import java.util.Properties;
  */
 
 @Path("/service")
+@Stateless
 public class ServerUtils {
     @GET
     @Path("/versao")
+    @RolesAllowed("admin")
     public String echo() {
         return buildTime();
     }
@@ -36,6 +40,7 @@ public class ServerUtils {
 
     @GET
     @Path("teste")
+    @RolesAllowed("user")
     public Response teste() {
         return Response.ok().build();
     }

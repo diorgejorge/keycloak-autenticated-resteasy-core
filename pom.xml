@@ -4,7 +4,7 @@
     <groupId>com.totvs.noneco</groupId>
     <artifactId>resteasy-core-keycloak</artifactId>
     <packaging>war</packaging>
-    <version>1.0-Final</version>
+    <version>1.0-SNAPSHOT</version>
     <name>RestEasy Com Keycloak core Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <repositories>
@@ -70,6 +70,11 @@
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-core</artifactId>
             <version>1.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.spec.javax.ejb</groupId>
+            <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+            <version>1.0.2.Final</version>
         </dependency>
     </dependencies>
     <build>
