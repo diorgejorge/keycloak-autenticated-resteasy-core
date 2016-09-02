@@ -17,10 +17,15 @@ import java.util.Properties;
 @Path("/service")
 @Stateless
 public class ServerUtils {
+
+    /**
+     * Used to check server info
+     * @return {@link String} with version, build date and java version used on compilation
+     */
     @GET
-    @Path("/versao")
+    @Path("/version")
     @RolesAllowed("admin")
-    public String echo() {
+    public String version() {
         return buildTime();
     }
 
@@ -31,13 +36,17 @@ public class ServerUtils {
         try {
             prop.load(input);
 
-            return "Versao "+prop.getProperty("build.version") +" Construida em "+prop.getProperty("build.date")+" Usando java: "+prop.getProperty("build.java.version");
+            return "Version: "+prop.getProperty("build.version") +" Build in "+prop.getProperty("build.date")+" Using java version: "+prop.getProperty("build.java.version");
         } catch (IOException e) {
             return "";
         }
 
     }
 
+    /**
+     * Server availability check
+     * @return returns Response.ok() = 200
+     */
     @GET
     @Path("teste")
     @RolesAllowed("user")
